@@ -1,0 +1,56 @@
+% codeing: UTF-8
+\documentclass[UTF8]{article}
+\usepackage[greek,english]{babel}
+\usepackage[OT2,OT1]{fontenc}
+\usepackage{xltxtra,xunicode}
+%Chinese font
+\usepackage[slantfont,boldfont,CJKnumber,CJKtextspaces,CJKmathspaces]{xeCJK}
+\setCJKmainfont{Microsoft YaHei}
+
+\begin{document}
+%babel and fontenc package can be used to type a few special characters without input method support
+\textgreek{abcde}
+{\fontencoding{OT2}\selectfont ABCabc}
+
+%ligature
+shelfful shelf{}ful shelf\/ful %last one got more space??
+
+%quotes
+``\,`A' or `B?'\,`` he asked.
+
+% dash
+An inter-word dash or, hyphen, as in X-ray
+
+A mediaum dash for number ranges, like 1--2
+
+A punctuation dash---like this.
+
+%eclipse
+Good: One two, three\dots % \dots with more spaces in between
+
+Bad: One, two, three...
+
+She $\ldots$ she got it. %use math mode to ensure the equivenlance between spaces in front of and behind eclipse.
+
+She \ldots she got it.
+
+I've no idea\ldots.
+
+% Chinese English Mixed
+中文和English的混排效果
+并不依赖于 space 的有无
+
+
+% Ignore Spaces
+\mbox{条目}-a不同于条目-b
+
+% phantom
+幻影\phantom{参数}速速隐形
+
+幻影参数速速隐形
+
+%line break
+这是一行文字\\另一行
+
+这是一行文字\linebreak 另一行
+\end{document}
