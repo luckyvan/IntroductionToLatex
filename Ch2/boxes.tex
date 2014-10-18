@@ -1,0 +1,21 @@
+% codeing: UTF-8
+\documentclass[UTF8]{ctexart}
+
+\newsavebox\mybox
+
+\begin{document}
+\mbox{cannot be broken}
+
+%Overlap
+\makebox[0pt][l]{word}文字
+
+语言文字\llap{word}\\
+\rlap{word}语言文字
+
+%边框
+\fbox{framed} \\
+\framebox[3cm][s]{framed box}
+
+\sbox\mybox{test text}
+\usebox\mybox \fbox{\usebox\mybox}
+\end{document}
